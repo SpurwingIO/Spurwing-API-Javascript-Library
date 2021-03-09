@@ -11,7 +11,7 @@ On your dashboard you will have the "API Info" page with your **API key** and **
 
 - **Provider ID:** This is your public calendar identifier.
 
-**Security Warning:** Never expose your **API Key** in front-end javascript code. All implementations that require your API Key should be handled by your back-end.
+**Security Warning:** Spurwing's API has several private/sensitive endpoints for creating, modifying & deleting data. It is highly discouraged to use functions which require your private API key to be exposed to external users. Never expose your **API Key** in front-end javascript code. All implementations that require your API Key should be handled by your back-end in a secure environment.
 
 ## Usage
 Include the JS library in the `<head>` of your project:
