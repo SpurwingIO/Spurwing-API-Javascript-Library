@@ -3,7 +3,7 @@ const expect = chai.expect;
 // https://www.chaijs.com/guide/styles/
 
 let sp = new Spurwing();
-const PID = 'your-product-id';
+const PID = 'your-provider-id';
 
 function dateNow() {
   let d = new Date();
