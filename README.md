@@ -1,1 +1,1 @@
-"# Spurwing-API-Javascript-Library" 
+# Spurwing API Javascript Library
