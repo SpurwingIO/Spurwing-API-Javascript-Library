@@ -23,9 +23,6 @@ let sp = new Spurwing();
 
 const PID = 'your provider id';
 
-let page_size = 100; // for paging results
-let offset = 0;      // for paging results
-
 let allApps = await sp.get_appointment_types(PID, true)
 
 ```
