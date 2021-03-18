@@ -40,7 +40,7 @@ const Spurwing = (function() {
         success: ((data) => resolve(data)),
         error:   ((data) => reject(data)),
       });
-    }).catch(error =>{console.error(method + ' error:', error) ; throw error});
+    }).catch((error) =>{console.error(method + ' error:', error) ; throw error});
   }
 
   this.ajax = function(option) {
@@ -86,7 +86,7 @@ const Spurwing = (function() {
             let response = JSON.parse(xhr.responseText);
             success(response);
           } else {
-            error(xhr.status, xhr.responseText);
+            error({status:xhr.status, responseText:xhr.responseText});
           }
         }
       };
