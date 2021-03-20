@@ -52,6 +52,6 @@ http://localhost:8080/tests.html?pid=ABC&key=XYZ
 ```
 
 ## Support
-- For public bugs & issues and bugs please use the GitHub Issues Page.
+- For public issues and bugs please use the GitHub Issues Page.
 - For enquiries and private issues reach out to us at support@spurwing.io
 - Join our Discord Community Server: https://discord.gg/j3gd5Qk5uW
