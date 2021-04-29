@@ -19,7 +19,7 @@ On your dashboard you will have the "API Info" page with your **API key** and **
 Include the JS library in the `<head>` of your project:
 `<script src="spurwing.js"></script>`
 
-Use the GitHub as CDN:
+Use GitHub as CDN:
 `<script src="https://spurwing.github.io/Spurwing-API-Javascript-Library/spurwing.js"></script>`
 
 Then you can use it as such:
