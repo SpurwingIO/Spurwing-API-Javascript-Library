@@ -35,7 +35,7 @@ async function runner(testname, func) {
 
     let A = await sp.get_appointment_types(PID)
     console.log({A})
-    A.should.have.lengthOf(3) // default 3
+    expect(A.length).to.be.at.least(1)
 
     let appointment_type_id = A[0].id;
 
@@ -74,6 +74,41 @@ async function runner(testname, func) {
     console.log({A})
     A.should.have.property('data')
     A.data.should.have.property('appointments')
+  }));
+
+  await runner('TEST 3', (async() => {
+    let sp = new Spurwing();
+
+    let A = await sp.get_appointment_types(PID)
+    console.log({A})
+    expect(A.length).to.be.at.least(1)
+
+    let appointment_type_id = A[3].id;
+
+    let B = await sp.create_group_appointment(KEY, PID, appointment_type_id, dateTomorrow() + ' 16:00:00')
+    console.log({B})
+    B.should.have.property('data')
+    B.data.should.have.property('appointment')
+    B.data.appointment.should.have.property('id')
+    let apid = B.data.appointment.id
+
+    async function add_attendee(fn, ln, email) {
+      let D = await sp.complete_booking(PID, appointment_type_id, email, fn, ln, null, null, apid);
+      console.log({D})
+      D.should.have.property('appointment')
+    }
+    await add_attendee('john', 'G', 'john@nevolin.be')
+    await add_attendee('bill', 'H', 'bill@nevolin.be')
+
+    let E = await sp.list_appointments(KEY, 1000, 0)
+    console.log({E})
+
+    let F = await sp.delete_appointment(KEY, apid)
+    console.log({F})
+    F.should.have.property('data')
+    F.data.should.have.property('appointment')
+    F.data.appointment.id.should.equal(apid)
+    F.errors.should.have.lengthOf(0)
   }));
 
 })();
