@@ -30,7 +30,7 @@ let sp = new Spurwing();
 
 const PID = 'your provider id';
 
-let allApps = await sp.get_appointment_types(PID, true)
+let allApps = await sp.get_appointment_types(PID, 1000, 0)
 
 ```
 ## Documentation
