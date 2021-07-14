@@ -2,7 +2,7 @@
 
 Lightweight Vanilla JavaScript library for Spurwing's API.
 
-Spurwing's API makes it easy to add robust scheduling and booking to your application. We power millions of appointment bookings for thousands of companies, from marketplaces to SaaS & healthcare. Learn more about the [Spurwing Scheduling API](https://github.com/Spurwing/Appointment-Scheduling-API).
+Spurwing's API makes it easy to add robust scheduling and booking to your application. We power millions of appointment bookings for thousands of companies, from marketplaces to SaaS & healthcare. Learn more about the [Spurwing Scheduling API](https://github.com/Spurwingio/Appointment-Scheduling-API).
 
 ![image](https://user-images.githubusercontent.com/9488406/119051678-c0d6dc80-b9c3-11eb-8b2d-8ec5a57a6db2.png)
 
@@ -22,7 +22,7 @@ Include the JS library in the `<head>` of your project:
 `<script src="spurwing.js"></script>`
 
 Use GitHub as CDN:
-`<script src="https://spurwing.github.io/Spurwing-API-Javascript-Library/spurwing.js"></script>`
+`<script src="https://spurwingio.github.io/Spurwing-API-Javascript-Library/spurwing.js"></script>`
 
 Then you can use it as such:
 ```js
